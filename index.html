@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PovioDrava</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js" integrity="sha512-4+zFvAejSGVlybiAKYyAz3KMjmbIT7I+wXgx190ZAsT19L2z8S4htBy1scR7CyP9pDKNSaolJMLedCigA/gFVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body >
+ <!-- Header with search bar -->
+ <div class="header">
+  <!-- Logo or title (you can add your logo or title here) -->
+    <h1 class="title">solvio</h1>
+  
+  <!-- Search bar and button -->
+    <div class="search-container">
+      <div class="searchbox">
+        <i class='bx bx-search-alt'></i>
+        <input type="search" id="search" name="search" placeholder="search topic/user" style="margin-right: 10px;">
+        <button class="search-button">Search</button>
+      </div>
+      
+
+      <!-- Date form -->
+        <form class="date-form" style="margin-left: 30px;">
+            <label for="from-date" style="font-size: 70%;">From:</label>
+            <input type="date" id="from-date" class="date-input">
+            <label for="to-date" style="font-size: 70%; margin-left: 10px;">To:</label>
+            <input type="date" id="to-date" class="date-input">
+        </form>
+      
+    </div>
+      <button id="loginButton" onclick="" class="account-icon"><img src="images/AccountIcon.svg" alt="Account" style="height: 70%;"></button>
+   <div id="loggedInUserDetails" style="display: none;">
+<!--     Logged in as: <span id="loggedInUserName"></span> from <span id="loggedInUserDepartment"></span>-->
+   </div>
+
+ </div>
+
+
+<div class="side_main">
+  <!-- Sidebar -->
+  <div class="sidebar">
+  <!-- GitHub-style section buttons -->
+    <a class="sidebar-item" href="#">
+      
+      <img src="images/FeedICON.svg" style="width: 50%; height: 50%;">
+      FEED
+    </a>
+    <a class="sidebar-item" href="#">
+      <img src="images/MyPostsIcon.svg" alt="MyPostsIcon" style="height: 50%; width: 50%;">
+      MY POSTS
+    </a>
+    <a class="sidebar-item" href="#">
+      <img src="images/SaveIcon.svg" alt="saveicon" style="height: 50%; width: 50%;">
+      SAVED
+    </a>
+    <a class="sidebar-item" href="#">
+      
+      <img src="images/AddIcon.svg" alt="ADD" style="height: 50%; width: 50%;">
+      ADD
+    </a>
+  </div>
+  <div class="container">
+    <section class="Feed" style="display: block;">  
+      <div class="post_section">
+        <div id="posts-section">
+          
+        </div>
+      </div>
+    </section>
+    <section class="MyPosts" style="display: none;"></section>
+    <section class="Saved" style="display: none;"></section>
+    <section class="Add" style="display: none;"></section>
+    <section class="Profile" style="display: none;"></section>
+    
+  </div>
+</div>
+
+</body>
+
+
+
+<!--<section class="container forms">
+  <div class="logo">
+    <h1>solvio</h1>
+  </div>
+  
+
+  
+</section>-->
+<script src="script.js"></script>
+<script src="scriptBackend.js"></script>
+</body>
+</html>

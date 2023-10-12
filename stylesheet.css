@@ -1,0 +1,711 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00bffb;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins-Light;
+    color: white;
+}
+::placeholder {
+    color: white; /* Change to the desired color, e.g., red (#FF0000) */
+}
+input:focus::placeholder {
+    color: transparent;
+  }
+@font-face {
+    font-family: Arista-Pro-Alternate-Light;
+    src: url(font/Arista-Pro-Alternate-Light.ttf);
+}
+@font-face{
+    font-family: Poppins-Light;
+    src: url(font/Poppins-Light.ttf);
+
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    margin-left: 20%;
+    align-items: center;
+    justify-content: start;
+    background-color: #000;
+    background-image: radial-gradient(circle 80vh at 50% 0%, #00bffb, #0000);
+    background-size: 100% -50%;
+    background-repeat: no-repeat;
+    column-gap: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 10%;
+    
+
+}
+.form {
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: transparent;
+    color: white;
+}
+.form.signup {
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup {
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login {
+    opacity: 0;
+    pointer-events: none;
+}
+/* Basic CSS for the header */
+.header {
+    position: fixed;
+    background-color: black;
+    color: #fff;
+    height: 10%;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 28px;
+    border-bottom: 4px solid white;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Style for the title (left-aligned) */
+.title {
+    margin-right: 9%;
+    margin-left: 5%;
+    font-family: Arista-Pro-Alternate-Light;
+}
+.loginpagetitle{
+    font-family: Arista-Pro-Alternate-Light;
+
+}
+/* Style for the search bar container */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+/* Style for the search bar */
+.search-bar {
+    width: 300px;
+    padding: 10px 30px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-size: 14px;
+    background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: none;
+    webkit-appearance: none;
+    webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+
+/* Style for the magnifying glass icon */
+.search-icon {
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Style for the search button */
+.search-button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+    transition: background-color 0.3s
+}
+.search-button:hover {
+    background-color: white; /* Change the background color to white on hover */
+    color: #333; /* Change text color on hover if needed */
+  }
+form {
+    margin-top: 30px;
+}
+.form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field input,
+.field button {
+    height: 100%;
+    width: 100%;
+    
+    background-color: transparent;
+}
+.field input {
+    outline: none;
+    padding: 0 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.field input:focus {
+    border-bottom-width: 2px;
+}
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #333333;
+    cursor: pointer;
+    padding: 5px;
+}
+.field button {
+    color: #00bffb;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px white solid;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.field button:hover {
+    color: #00bffb;
+    background-color: white;
+}
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+.form-link span,
+.form-link a {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+.form a {
+    color: white;
+    text-decoration: none;
+}
+.form a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 15px 10px;
+    }
+}
+
+
+/*navigation*/
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+
+.navbar a {
+    float: left;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: #00bffb;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*logo*/
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 500px;
+    font-size: 100px;
+    color: white;
+}
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 20%;
+    margin-top: 10%;
+    background-color: black;
+    color: #fff;
+    overflow-y: hidden;
+    border-right: 4px white solid;
+    display: flexbox;
+}
+
+/* Style for sidebar items (buttons) */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    height: 22.5%;
+    font-size: 30px;
+}
+.side_main {
+    justify-content: start;
+    align-items: center;
+    display: flex;  
+
+}
+.sidebar-item:hover {
+    background-color: #444;
+}
+
+/* Style for icons (Font Awesome icons used here) */
+.sidebar-item i {
+    margin-bottom: 10px;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+}
+.date-form {
+    align-items: center;
+    margin: 0px;
+}
+.date-input{
+    color: white;
+    background-color: transparent;
+    
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+
+
+.bx-search {
+    position: absolute;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+#search {
+    height: 30px;
+    width: 400px;
+    font-size: 25px;
+    text-align:center;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    border: 2px solid white;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+    margin-right: 50px;
+}
+#search:focus {
+    width: 650px;
+    outline: none;
+
+}
+.account-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    height: 70%;
+    background-color: transparent;
+    border: none;
+    
+    
+}
+.account-icon:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+body{
+    background-image: url(images/AccountIcon.svg);
+}
+.logincontainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    background-image: radial-gradient(circle 80vh at 50% 0%, #00bffb, #0000);
+    background-size: 100% -50%;
+    background-repeat: no-repeat;
+    column-gap: 30px;
+}
+.loginlogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 500px;
+    font-size: 100px;
+    color: white;
+}
+.submit{
+    font-size: 20px;
+    color: #00bffb;
+}
+.profile-icon,
+.lock-icon {
+    position: absolute;
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    color: white;
+    padding: 12px;
+    pointer-events: none;
+}
+.profile-icon::before {
+    content: "\f007"; /* Font Awesome user icon */
+    left: 10px;
+}
+
+/* Positioning for the lock icon */
+.lock-icon::before {
+    content: "\f023"; /* Font Awesome lock icon */
+    left: 10px;
+}
+.email{
+            width: 100%;
+            padding: 10px 40px 10px 40px; /* Adjust padding for the icon space */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+}
+
+.container *{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+/*JSON*/
+
+.post_section {
+    width: 100%;
+    padding: 1em;
+    box-shadow: #f0f0f0 0 0 2px;
+}
+
+/* layout principal */
+.post_section .top, .post_section .bottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    padding: .4em;
+}
+.post_section .top {
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+}
+.post_section .bottom {
+    box-shadow: 0 -2px 2px rgba(0,0,0,.1);
+}
+
+/* layout header */
+.post_section .top .head-btn {
+    min-width: 40px;
+    text-align: center;
+}
+.post_section .top .head-logo {
+    flex-grow: 1;
+    text-align: center;
+}
+.post_section .top .head-logo .logo {
+    width: 103px;
+    height: 29px;
+    display: inline-block;
+    background-size: 270px 235px;
+    background-position: 0 -73px;
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+}
+.post_section .top .head-btn .photo {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: 270px 235px;
+    background-position: -196px -50px;
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+}
+.post_section .top .head-btn .people {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: 270px 235px;
+    background-position: -171px -75px;
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+}
+
+/* layout footer */
+.post_section .bottom .footer-btn {
+    width: 20%;
+    text-align: center;
+}
+.post_section .bottom .footer-btn span {
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+.post_section .bottom .footer-btn .like {
+    background-size: 270px 235px;
+    background-position: -25px -161px;
+}
+
+/* post layout */
+#posts-section {
+    width: 100%;
+}
+
+.post-content {
+    width: 95%;
+    translate: 2.5%;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*box-shadow: #f0f0f0 0 0 2px;*/
+}
+
+.post_section #posts-section .post {
+    width: 50%;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0 10px 0;
+    border: grey solid 1px;
+}
+.post_section #posts-section .post:last-child {
+    /*margin-bottom: 0;*/
+}
+.post_section #posts-section .post .post-header {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-posts-section: flex-start;
+    align-items: center;
+    padding: .4em;
+}
+.post_section #posts-section .post .post-header .user-thumb {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid deeppink;
+}
+.post_section #posts-section .post .post-header .user-details {
+    font-size: .95em;
+    line-height: 1em;
+    flex-grow: 1;
+    padding: 0 .5em;
+}
+.post_section #posts-section .post .post-header .user-details strong, .post_section #posts-section .post .post-header .user-details span {
+    display: block;
+}
+.post_section #posts-section .post .post-header .post-menu {
+    min-width: 40px;
+}
+.post_section #posts-section .post .post-header .post-menu .menu {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 270px 235px;
+    background-position: -50px -186px;
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+}
+.post_section #posts-section .post .post-photo {
+    width: 100%;
+}
+.post_section #posts-section .post .post-footer .buttons {
+    width: 100%;
+    padding: .4em 0em;
+    display: flex;
+    justify-posts-section: flex-start;
+    align-items: center;
+}
+.post_section #posts-section .post .post-footer .buttons .spacer {
+    flex-grow: 1;
+}
+.post_section #posts-section .post .post-footer .buttons .post-btn {
+    text-align: center;
+    min-width: 40px;
+}
+.post_section #posts-section .post .post-footer .buttons .post-btn span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+}
+.post_section #posts-section .post .post-footer .buttons .post-btn .like {
+    background-size: 270px 235px;
+    background-position: -25px -161px;
+}
+/* When the like button is pressed, move the background image to display activated */
+.post_section #posts-section .post .post-footer .buttons .post-btn .like.active {
+    background-size: 270px 235px;
+    background-position: -0px -161px;
+}
+
+/* Comment button and input */
+.post_section #posts-section .post .post-footer .buttons .post-btn .comn {
+    background-size: 270px 235px;
+    background-position: -142px -103px;
+}
+.comment-input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-top: 5px;
+}
+.comment-input-div {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.comment-input {
+    width: 80%;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    border: 2px solid white;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+.comment-input:focus {
+    width: 100%;
+    outline: none;
+}
+.submit-comment {
+    padding: 5px 15px;
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-comment:hover {
+    background-color: #357abf;
+}
+
+.post_section #posts-section .post .post-footer .buttons .post-btn .save {
+    background-size: 270px 235px;
+    background-position: -221px -150px;
+}
+.post_section #posts-section .post .post-footer .likes {
+    display: flex;
+    justify-posts-section: flex-start;
+    align-items: center;
+    padding: .4em 1em;
+    font-size: .95em;
+}
+.post_section #posts-section .post .post-footer .likes .user-like {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: .5em;
+}
+.post_section #posts-section .post .post-footer .likes strong {
+    margin: 0 .3em;
+}
+.post_section #posts-section .post .post-footer .comments {
+    width: 100%;
+    padding: .4em 1em;
+    font-size: .95em;
+}
+.post_section #posts-section .post .post-footer .comments p {
+    margin: 0;
+}
+.post_section #posts-section .post .post-footer .time {
+    text-transform: uppercase;
+    display: block;
+    padding: 0 1em;
+    color: #c0c0c0;
+    font-size: .75em;
+}
